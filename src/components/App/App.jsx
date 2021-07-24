@@ -1,5 +1,6 @@
 import Header from '../Header';
 import './styles/App.Styles.css';
+import MainNav from '../MainNav/index';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <div className="app">
         <div className="app">Test</div>
+        <MainNav />
       </div>
     </>
   );
