@@ -1,8 +1,8 @@
-import './App.css';
+import './styles/App.Styles.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <span className="header">🎬 Entertainment Hub 🎥</span>
     </div>
   );
