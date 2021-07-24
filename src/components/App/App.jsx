@@ -1,10 +1,14 @@
+import Header from '../Header';
 import './styles/App.Styles.css';
 
 function App() {
   return (
-    <div className="app">
-      <span className="header">🎬 Entertainment Hub 🎥</span>
-    </div>
+    <>
+      <Header />
+      <div className="app">
+        <div className="app">Test</div>
+      </div>
+    </>
   );
 }
 
