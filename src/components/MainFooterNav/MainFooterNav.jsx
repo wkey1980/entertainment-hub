@@ -1,13 +1,17 @@
-import React from 'react';
+import React,  {useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 // Icons Imported
+import HomeIcon from '@material-ui/icons/Home';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import MovieIcon from "@material-ui/icons/Movie";
 import TvIcon from "@material-ui/icons/Tv";
 import SearchIcon from "@material-ui/icons/Search";
+
 
 
 
@@ -25,6 +29,20 @@ const MainNav = () => {
 
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
+    const history = useHistory()
+
+    useEffect(() => {
+        if ( value === 0 )
+            history.push("/");
+        else if ( value === 0)
+        history.push("/trending");
+        else if ( value === 1)
+        history.push("/movies");
+        else if ( value === 2)
+        history.push("/series");
+        else if ( value === 3)
+        history.push("/search");
+    }, [value])
 
     return (
         <BottomNavigation
@@ -36,6 +54,7 @@ const MainNav = () => {
             showLabels
             className={classes.root}
         >
+
             <BottomNavigationAction
                 style={{ color: "white" }}
                 label="Trending"
